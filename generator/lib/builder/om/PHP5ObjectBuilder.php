@@ -4130,7 +4130,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . " ";
     {
         $relatedName = $this->getRefFKPhpNameAffix($refFK, $plural = true);
         $relatedObjectName = $this->getRefFKPhpNameAffix($refFK, $plural = false);
-        $relatedObjectClassName = $refFK->getForeignTable()->getPhpName();
+        $relatedObjectClassName = $refFK->getTable()->getPhpName();
 
         $inputCollection = lcfirst($relatedName . 'ScheduledForDeletion');
         $lowerRelatedObjectName = lcfirst($relatedObjectName);
